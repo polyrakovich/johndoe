@@ -15,9 +15,8 @@ html {
 }
 
 body {
+    width: 100%;
     font-family: "Courier Prime", Roboto, sans-serif;
-    min-width: 100vw;
-    min-height: 100vh;
     background: linear-gradient(135deg, rgba(2,2,2,1) 0%, rgba(60,60,60,1) 50%);
     color: #e0e0e0;
     position: relative;

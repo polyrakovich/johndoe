@@ -20,6 +20,8 @@ $df-white: #dfdfdf;
 
 main {
   font-family: Roboto,sans-serif;
+  //width: 100%;
+  margin: 0 auto;
 }
 
 .section__header {
@@ -140,7 +142,7 @@ main {
 }
 
 .section__main-skills {
-  width: 100vw;
+  width: 100%;
   margin: 4.5rem 0 4.5rem 0;
   background-color: #161616;
   h2 {
