@@ -40,15 +40,6 @@ $white: #ffffff;
   }
 }
 
-svg {
-  width: 34px;
-  height: 34px;
-  fill: $white;
-  path {
-    fill: $white;
-  }
-}
-
 .navigation__unordered-list {
   @include flex-between;
   font-size: 1.625rem;
@@ -74,6 +65,14 @@ svg {
   @include flex-center;
   font-size: 1.625rem;
   color: $white;
+  svg {
+    width: 34px;
+    height: 34px;
+    fill: $white;
+    path {
+      fill: $white;
+    }
+  }
   a {
     @include flex-center;
   }
