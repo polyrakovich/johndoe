@@ -15,12 +15,12 @@ html {
 }
 
 body {
+    position: relative;
     min-width: 100%;
     min-height: 100vh;
     font-family: "Courier Prime", Roboto, sans-serif;
     background: linear-gradient(135deg, rgba(2,2,2,1) 0%, rgba(60,60,60,1) 50%);
     color: #e0e0e0;
-    position: relative;
 }
 
 img, svg {
