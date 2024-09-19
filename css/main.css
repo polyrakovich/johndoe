@@ -186,7 +186,7 @@ main {
   width: 12%;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background-color: #323232;
+  background-color: #333333;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -348,15 +348,14 @@ main {
 }
 
 .section__main-companies-container {
+  border: 1px solid red;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   align-items: center;
-  background-image: url("/image/line-svg.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .section__main-companies {
+  border: 1px solid red;
   padding: 3rem;
   background-color: #161616;
 }
@@ -370,8 +369,16 @@ main {
   color: #dfdfdf;
 }
 
+.section__main-companies-group-left {
+  border: 1px solid red;
+}
+
+.section__main-companies-group-right {
+  border: 1px solid red;
+}
+
 .company {
-  width: 35vw;
+  border: 1px solid red;
   padding: 2rem;
 }
 .company h3 {
@@ -388,6 +395,7 @@ main {
   font-size: 1rem;
 }
 .company a {
+  border: 1px solid red;
   display: block;
   padding: 1rem;
   margin: 1rem auto;
@@ -408,15 +416,45 @@ main {
 }
 
 .section__main-companies-group-line {
+  position: relative;
+  width: 15%;
+  height: 100%;
+  border: 1px solid red;
   justify-self: center;
 }
+.section__main-companies-group-line .line-svg {
+  border: 1px solid red;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  height: 100%;
+  background-color: #73ff00;
+}
 .section__main-companies-group-line svg {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 10rem;
+  border: 1px solid red;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  aspect-ratio: 1/1;
+}
+.section__main-companies-group-line svg:nth-child(1) {
+  top: 13%;
+}
+.section__main-companies-group-line svg:nth-child(2) {
+  top: 30%;
+}
+.section__main-companies-group-line svg:nth-child(3) {
+  top: 46%;
+}
+.section__main-companies-group-line svg:nth-child(4) {
+  top: 63%;
 }
 .section__main-companies-group-line svg:nth-child(5) {
-  margin: 0;
+  top: 79.5%;
 }
 .section__main-companies-group-line svg path {
   fill: #161616;

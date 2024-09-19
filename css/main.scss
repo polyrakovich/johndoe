@@ -1,7 +1,17 @@
 $neon-green: #73ff00;
 $black: #000000;
+$background-black: #161616;
+$dark-gray: #2d2d2d;
+$dark-gray-ellipse: #222222;
+$dark-gray-js-ellipse: #333333;
+$gray: #4f4f4f;
+$light-gray: #828282;
 $white: #ffffff;
+$nav-white: #c8c7cc;
+$paragraph-white: #f3f3f3;
+$white-ellipse: #b0b0b0;
 $df-white: #dfdfdf;
+$header-white: #e0e0e0;
 
 @mixin flex-between {
   display: flex;
@@ -204,7 +214,7 @@ main {
     width: 12%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #323232;
+    background-color: #333333;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
@@ -367,15 +377,17 @@ main {
 //----------------------------------------------------------------------------------------//
 
 .section__main-companies-container {
+  border: 1px solid red;
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   align-items: center;
-  background-image: url("/image/line-svg.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  //background-image: url("/image/line-svg.svg");
+  //background-repeat: no-repeat;
+  //background-position: center;
 }
 
 .section__main-companies {
+  border: 1px solid red;
   padding: 3rem;
   background-color: #161616;
   h2 {
@@ -389,10 +401,19 @@ main {
     }
   }
 }
+.section__main-companies-group-left {
+  border: 1px solid red;
+}
+.section__main-companies-group-right {
+  border: 1px solid red;
+}
 
 .company {
-  width: 35vw;
+  border: 1px solid red;
   padding: 2rem;
+  //svg {
+  //  width: 10%;
+  //}
   h3 {
     padding: 1rem;
     text-align: center;
@@ -407,6 +428,7 @@ main {
     font-size: 1rem;
   }
   a {
+    border: 1px solid red;
     display: block;
     padding: 1rem;
     margin: 1rem auto;
@@ -427,13 +449,43 @@ main {
   }
 }
 .section__main-companies-group-line {
+  position: relative;
+  width: 15%;
+  height: 100%;
+  border: 1px solid red;
   justify-self: center;
+  .line-svg{
+    border: 1px solid red;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 100%;
+    background-color: $neon-green;
+  }
   svg {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 10rem;
+    border: 1px solid red;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    aspect-ratio: 1/1;
+    &:nth-child(1){
+      top: 13%;
+    }
+    &:nth-child(2){
+      top:30%;
+    }
+    &:nth-child(3){
+      top:46%;
+    }
+    &:nth-child(4){
+      top:63%;
+    }
     &:nth-child(5){
-      margin: 0;
+      top:79.5%;
     }
     path {
       fill: #161616;

@@ -1,9 +1,23 @@
-root {
+:root {
     --neon-green: #73ff00;
-}
-html {
+    --black: #000000;
+    --background-black: #161616;
+    --dark-gray: #2d2d2d;
+    --dark-gray-ellipse: #222222;
+    --dark-gray-js-ellipse: #333333;
+    --gray: #4f4f4f;
+    --light-gray: #828282;
+    --white: #ffffff;
+    --nav-white: #c8c7cc;
+    --paragraph-white: #f3f3f3;
+    --white-ellipse: #b0b0b0;
+    --df-white: #dfdfdf;
+    --header-white: #e0e0e0;
     --container: 100%;
     --padding-container: 10%;
+}
+
+html {
     box-sizing: border-box;
     position: relative;
     background: linear-gradient(135deg, rgba(2,2,2,1) 0%, rgba(60,60,60,1) 100%);
@@ -20,7 +34,7 @@ body {
     min-height: 100vh;
     font-family: "Courier Prime", Roboto, sans-serif;
     background: linear-gradient(135deg, rgba(2,2,2,1) 0%, rgba(60,60,60,1) 50%);
-    color: #e0e0e0;
+    color: var(--header-white);
 }
 
 img, svg {
