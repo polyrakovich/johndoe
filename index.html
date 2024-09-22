@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
 
-    <link href="css/index.scss" rel="stylesheet" type="text/css"/>
+    <link href="css/index.css" rel="stylesheet" type="text/css"/>
 
     <link rel="preload" href="fonts/courier-prime-v9-latin-700.woff2"/>
     <link rel="preload" href="fonts/courier-prime-v9-latin-regular.woff2"/>
@@ -40,19 +40,23 @@
             </ul>
             <ul class="navigation__unordered-list-svg">
                 <li><a href="#">
-                    <svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="M20.47,2H3.53A1.45,1.45,0,0,0,2.06,3.43V20.57A1.45,1.45,0,0,0,3.53,22H20.47a1.45,1.45,0,0,0,1.47-1.43V3.43A1.45,1.45,0,0,0,20.47,2ZM8.09,18.74h-3v-9h3ZM6.59,8.48h0a1.56,1.56,0,1,1,0-3.12,1.57,1.57,0,1,1,0,3.12ZM18.91,18.74h-3V13.91c0-1.21-.43-2-1.52-2A1.65,1.65,0,0,0,12.85,13a2,2,0,0,0-.1.73v5h-3s0-8.18,0-9h3V11A3,3,0,0,1,15.46,9.5c2,0,3.45,1.29,3.45,4.06Z"/></svg>
+                    <svg width="800px" height="800px" viewBox="0 0 800 800">
+                        <use href="image/linkedin.svg#link"></use>
+                    </svg>
                     <span>Linkedin</span>
                 </a></li>
                 <li><a href="#">
-                    <svg viewBox="0 0 34 34" width="34" height="34">
+                    <svg width="800" height="800" viewBox="0 0 800 800">
                         <use href="image/github.svg#git"></use>
                     </svg>
                     <span>Github</span>
                 </a></li>
                 <li><a href="#">
-                    <svg class="message" width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M92.583 23.146H37.875c-4.63 0-8.417 3.787-8.417 8.417v37.875c0 4.67 3.788 8.416 8.417 8.416h54.708A8.39 8.39 0 0 0 101 69.438V31.563c0-4.63-3.745-8.417-8.417-8.417m0 46.292H37.875V38.59l27.354 14.014L92.583 38.59zM65.23 45.492l-27.354-13.93h54.708zM21.042 69.438c0 .715.126 1.388.21 2.104H4.208A4.215 4.215 0 0 1 0 67.333a4.215 4.215 0 0 1 4.208-4.208h16.834zm-8.417-39.98h8.627c-.084.716-.21 1.39-.21 2.105v6.312h-8.417a4.22 4.22 0 0 1-4.208-4.208 4.22 4.22 0 0 1 4.208-4.209M4.208 50.5a4.22 4.22 0 0 1 4.209-4.208h12.625v8.416H8.417A4.22 4.22 0 0 1 4.208 50.5" fill="#000"/></svg>
+                    <svg class="message" width="800px" height="800px" viewBox="0 0 800 800">
+                        <use href="image/message.svg#mes"></use>
+                    </svg>
                     <span>Contact me</span>
-                    <svg class="rectangle" width="229" height="56" viewBox="0 0 229 56" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                    <svg  id="rec" class="rectangle" width="229" height="56" viewBox="0 0 229 56" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2.5" y="2.5" width="224" height="51" rx="10.5" stroke="url(#paint0_linear_2_11)" stroke-width="5"/>
                         <defs>
                             <linearGradient id="paint0_linear_2_11" x1="114.5" y1="0" x2="114.5" y2="56" gradientUnits="userSpaceOnUse">
@@ -177,15 +181,34 @@
                     <div class="company">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias amet, aspernatur, aut dignissimos dolores ea ex expedita hic illo magni mollitia nihil nobis odit omnis quaerat quas quasi qui quibusdam quo ratione suscipit.</p>
-                        <a href="#">Go to website</a>
-<!--                        <svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">-->
-<!--                            <path d="M36.8889 19.5734C36.8889 29.2914 29.0663 37.1468 19.4444 37.1468C9.82258 37.1468 2 29.2914 2 19.5734C2 9.85539 9.82258 2 19.4444 2C29.0663 2 36.8889 9.85539 36.8889 19.5734Z" fill="#070707" stroke="#70FF00" stroke-width="4"/>-->
-<!--                        </svg>-->
+                        <a href="#">
+                            <span>Go to website</span>
+                            <svg  id="rec" class="rectangle" width="229" height="56" viewBox="0 0 229 56" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.5" y="2.5" width="224" height="51" rx="10.5" stroke="url(#paint0_linear_2_11)" stroke-width="5"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_2_11" x1="114.5" y1="0" x2="114.5" y2="56" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#70FF00" stop-opacity="0.55"/>
+                                        <stop offset="1" stop-color="white"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
                     </div>
                     <div class="company">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias amet, aspernatur, aut dignissimos dolores ea ex expedita hic illo magni mollitia nihil nobis odit omnis quaerat quas quasi qui quibusdam quo ratione suscipit.</p>
-                        <a href="#">Go to website</a>
+                        <a href="#">
+                            <span>Go to website</span>
+                            <svg  id="rec" class="rectangle" width="229" height="56" viewBox="0 0 229 56" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.5" y="2.5" width="224" height="51" rx="10.5" stroke="url(#paint0_linear_2_11)" stroke-width="5"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_2_11" x1="114.5" y1="0" x2="114.5" y2="56" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#70FF00" stop-opacity="0.55"/>
+                                        <stop offset="1" stop-color="white"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="section__main-companies-group-line">
@@ -214,17 +237,50 @@
                     <div class="company">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias amet, aspernatur, aut dignissimos dolores ea ex expedita hic illo magni mollitia nihil nobis odit omnis quaerat quas quasi qui quibusdam quo ratione suscipit.</p>
-                        <a href="#">Go to website</a>
+                        <a href="#">
+                            <span>Go to website</span>
+                            <svg  id="rec" class="rectangle" width="229" height="56" viewBox="0 0 229 56" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.5" y="2.5" width="224" height="51" rx="10.5" stroke="url(#paint0_linear_2_11)" stroke-width="5"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_2_11" x1="114.5" y1="0" x2="114.5" y2="56" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#70FF00" stop-opacity="0.55"/>
+                                        <stop offset="1" stop-color="white"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
                     </div>
                     <div class="company">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias amet, aspernatur, aut dignissimos dolores ea ex expedita hic illo magni mollitia nihil nobis odit omnis quaerat quas quasi qui quibusdam quo ratione suscipit.</p>
-                        <a href="#">Go to website</a>
+                        <a href="#">
+                            <span>Go to website</span>
+                            <svg  id="rec" class="rectangle" width="229" height="56" viewBox="0 0 229 56" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.5" y="2.5" width="224" height="51" rx="10.5" stroke="url(#paint0_linear_2_11)" stroke-width="5"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_2_11" x1="114.5" y1="0" x2="114.5" y2="56" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#70FF00" stop-opacity="0.55"/>
+                                        <stop offset="1" stop-color="white"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
                     </div>
                     <div class="company">
                         <h3>Lorem ipsum</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias amet, aspernatur, aut dignissimos dolores ea ex expedita hic illo magni mollitia nihil nobis odit omnis quaerat quas quasi qui quibusdam quo ratione suscipit.</p>
-                        <a href="#">Go to website</a>
+                        <a href="#">
+                            <span>Go to website</span>
+                            <svg  id="rec" class="rectangle" width="229" height="56" viewBox="0 0 229 56" fill="transparent" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.5" y="2.5" width="224" height="51" rx="10.5" stroke="url(#paint0_linear_2_11)" stroke-width="5"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_2_11" x1="114.5" y1="0" x2="114.5" y2="56" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#70FF00" stop-opacity="0.55"/>
+                                        <stop offset="1" stop-color="white"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </a>
                     </div>
                 </div>
                 </div>

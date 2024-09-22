@@ -381,9 +381,6 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr;
   align-items: center;
-  //background-image: url("/image/line-svg.svg");
-  //background-repeat: no-repeat;
-  //background-position: center;
 }
 
 .section__main-companies {
@@ -411,9 +408,7 @@ main {
 .company {
   border: 1px solid red;
   padding: 2rem;
-  //svg {
-  //  width: 10%;
-  //}
+
   h3 {
     padding: 1rem;
     text-align: center;
@@ -421,13 +416,16 @@ main {
     font-weight: 700;
     color: $neon-green;
   }
+
   p {
     text-align: justify;
     font-weight: 300;
     color: #f3f3f3;
     font-size: 1rem;
   }
+
   a {
+    position: relative;
     border: 1px solid red;
     display: block;
     padding: 1rem;
@@ -437,14 +435,27 @@ main {
     font-weight: 700;
     color: $white;
     font-size: 1.25rem;
-    background-image: url("/image/rectangle-svg.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    &:hover{
-      background-image: url("/image/rectangle-hover-svg.svg");
-      background-repeat: no-repeat;
-      background-position: center;
+
+    &:hover {
       color: $neon-green;
+
+      svg {
+        stop {
+          stop-color: $neon-green;
+          stop-opacity: 1;
+        }
+      }
+    }
+
+    .rectangle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      fill: transparent;
     }
   }
 }
@@ -489,296 +500,6 @@ main {
     }
     path {
       fill: #161616;
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .section__header {
-    padding: 3.5rem;
-  }
-  .section__header-h1 {
-    h1 {
-      padding: 0.75rem;
-      font-size: 3rem;
-    }
-    h2 {
-      padding: 1rem 0;
-      font-size: 2.5rem;
-    }
-    h3 {
-      padding: 0.75rem 0;
-    }
-  }
-
-  .section__header-years {
-    p:nth-child(2n+1) {
-      padding: 0 0.5rem 0 0.25rem;
-      font-size: 3rem;
-    }
-    p:nth-child(2) {
-      padding-right: 1rem;
-      font-size: 1rem;
-    }
-    p:nth-child(4) {
-      font-size: 1rem;
-    }
-  }
-  .section__main-container {
-    padding: 3.5rem;
-  }
-
-  .section__main-about {
-    h2 {
-      padding-bottom: 0.75rem;
-      font-size: 2rem;
-
-      span {
-        letter-spacing: 0.25rem;
-      }
-
-      p{
-        font-size: 1rem;
-      }
-    }
-  }
-
-  .main__card {
-    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
-    width: 40vw;
-    border-radius: 0.25rem;
-    margin-top: 0.5rem;
-
-    p {
-      padding-bottom: 0.75rem;
-      font-size: 1.25rem;
-    }
-
-    a{
-      font-size: 0.75rem;
-    }
-
-    svg {
-      width: 25px;
-      height: 25px;
-    }
-  }
-
-  .section__main-skills {
-    margin: 3.5rem 0 3.5rem 0;
-    h2 {
-      padding: 1.5rem 0 0 3rem;
-      font-size: 2rem;
-      span {
-        letter-spacing: 0.25rem;
-      }
-    }
-  }
-
-  .section__main-skills-svg-container {
-    padding: 2.5rem 1.5rem 2.5rem 1.5rem;
-    svg {
-      margin-left: 0.75rem;
-      width: 85px;
-      height: 85px;
-    }
-  }
-  //-------------------------------------------------------------------------------------------//
-  .section__main-projects {
-    h2 {
-      padding: 1.5rem 0 0 3.5rem;
-      font-size: 2rem;
-    }
-    span {
-      letter-spacing: 0.25rem;
-    }
-  }
-  .projects-container {
-    padding: 1.5rem 0.25rem;
-    margin-bottom: 7rem;
-    a {
-      margin: 0 0.25rem;
-    }
-  }
-  //----------------------------------------------------------------------------------------//
-  .section__main-companies {
-    padding: 2.5rem;
-    h2 {
-      font-size: 2rem;
-
-      span {
-        letter-spacing: 0.25rem;
-      }
-    }
-  }
-
-  .company {
-    padding: 1.5rem;
-    h3 {
-      padding: 0.75rem;
-      font-size: 1.25rem;
-    }
-    p {
-      font-size: 0.75rem;
-    }
-    a {
-      margin: 0.75rem auto;
-      width: 23vw;
-      height: 4vh;
-      font-size: 1.25rem;
-    }
-  }
-
-}
-@media (max-width: 480px) {
-  .section__header {
-    padding: 2rem;
-  }
-  .section__header-h1 {
-    h1 {
-      padding: 0.5rem;
-      letter-spacing: 0.25rem;
-      font-size: 1.75rem;
-    }
-    h2 {
-      padding: 0.5rem 0;
-      font-size: 1.5rem;
-    }
-    h3 {
-      padding: 0.25rem 0;
-      font-size: 1rem;
-    }
-  }
-
-  .section__header-years {
-    p:nth-child(2n+1) {
-      padding: 0 0.25rem 0 0;
-      font-size: 1.5rem;
-    }
-    p:nth-child(2) {
-      padding-right: 0.5rem;
-      font-size: 0.5rem;
-    }
-    p:nth-child(4) {
-      font-size: 0.5rem;
-    }
-  }
-  .section__main-container {
-    padding: 2rem;
-  }
-
-  .section__main-about {
-
-    h2 {
-      padding-bottom: 0.5rem;
-      font-size: 1.5rem;
-
-      span {
-        letter-spacing: 0.25rem;
-      }
-    }
-
-      p{
-        font-size: 0.75rem;
-      }
-    }
-
-
-  .main__card {
-    padding: 0.5rem 0.75rem 0.5rem 0.75rem;
-    width: 45vw;
-    border-radius: 0.25rem;
-    margin-top: 0.5rem;
-
-    p {
-      padding-bottom: 0.25rem;
-      font-size: 0.75rem;
-    }
-
-    a{
-      font-size: 0.5rem;
-    }
-
-    svg {
-      width: 15px;
-      height: 15px;
-    }
-  }
-
-  .section__main-skills {
-    margin: 2rem 0 2rem 0;
-    h2 {
-      padding: 1rem 0 0 2rem;
-      font-size: 1.5rem;
-      span {
-        letter-spacing: 0.25rem;
-      }
-    }
-  }
-
-  .section__main-skills-svg-container {
-    padding: 2rem 1rem 2rem 1rem;
-    svg {
-      margin-left: 0.5rem;
-      width: 50px;
-      height: 50px;
-    }
-  }
-  //-------------------------------------------------------------------------------------------//
-  .section__main-projects {
-    h2 {
-      padding: 1rem 0 0 2rem;
-      font-size: 1.5rem;
-    }
-    span {
-      letter-spacing: 0.25rem;
-    }
-  }
-  .projects-container {
-    padding: 1.5rem 0.25rem;
-    margin-bottom: 4rem;
-    a {
-      margin: 0 0.25rem;
-    }
-  }
-  //----------------------------------------------------------------------------------------//
-  .section__main-companies {
-    padding: 2rem;
-    h2 {
-      font-size: 1.5rem;
-
-      span {
-        letter-spacing: 0.25rem;
-      }
-    }
-  }
-
-  .company {
-    padding: 0.75rem;
-    h3 {
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-    p {
-      font-size: 0.5rem;
-    }
-    a {
-      margin: 0.5rem auto;
-      padding: 0.5rem;
-      width: 20vw;
-      height: 3vh;
-      font-size: 0.5rem;
-      border: 1px solid $neon-green;
-      border-radius: 0.25rem;
-      background: none;
-    }
-  }
-  .section__main-companies-group-line {
-    svg {
-      width: 20px;
-      height: 20px;
-      margin-bottom: 5rem;
-
     }
   }
 }
