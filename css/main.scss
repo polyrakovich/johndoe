@@ -5,6 +5,7 @@ $dark-gray: #2d2d2d;
 $dark-gray-ellipse: #222222;
 $dark-gray-js-ellipse: #333333;
 $gray: #4f4f4f;
+$span-gray: #3d3d3d;
 $light-gray: #828282;
 $white: #ffffff;
 $nav-white: #c8c7cc;
@@ -62,18 +63,18 @@ main {
   h2 {
     padding: 2rem 0;
     font-size: 3rem;
-    color: #e0e0e0;
+    color: $header-white;
   }
   h3 {
     padding: 1rem 0;
     font-size: 2rem;
-    color: #e0e0e0;
+    color: $header-white;
   }
 }
 
 .section__header-years {
   @include flex-between;
-  color: #4f4f4f;
+  color: $gray;
   p:nth-child(2n+1) {
     padding: 0 1rem 0 0.5rem;
     font-size: 4rem;
@@ -83,13 +84,13 @@ main {
     font-weight: 400;
     font-size: 1.25rem;
     text-transform: uppercase;
-    color: #828282;
+    color: $light-gray;
   }
   p:nth-child(4) {
     font-weight: 500;
     font-size: 1.25rem;
     text-transform: uppercase;
-    color: #828282;
+    color: $light-gray;
   }
 }
 .section__header_image-group {
@@ -119,7 +120,7 @@ main {
     aspect-ratio: 1/1;
     grid-area: main;
     border-radius: 50%;
-    background: #2d2d2d;
+    background: $dark-gray;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
@@ -132,7 +133,7 @@ main {
     bottom: 90%;
     left: 75%;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    background-color: #222222;
+    background-color: $dark-gray-ellipse;
   }
 
   .mid-ellipse {
@@ -143,7 +144,7 @@ main {
     width: 3%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #4f4f4f;
+    background-color: $gray;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
   .min-ellipse {
@@ -154,7 +155,7 @@ main {
     left: 85%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #b0b0b0;
+    background-color: $white-ellipse;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
@@ -174,7 +175,7 @@ main {
     left: 65%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #333333;
+    background-color: $dark-gray-js-ellipse;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
@@ -194,7 +195,7 @@ main {
     width: 17%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #333333;
+    background-color: $dark-gray-js-ellipse;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
   .typescript {
@@ -214,7 +215,7 @@ main {
     width: 12%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: #333333;
+    background-color: $dark-gray-js-ellipse;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   }
 
@@ -239,7 +240,7 @@ main {
     }
 
     p{
-      color: #f3f3f3;
+      color: $paragraph-white;
       font-size: 1.8125rem;
       font-weight: 400;
     }
@@ -253,7 +254,7 @@ main {
   border-radius: 0.25rem;
   margin-top: 0.5rem;
   font-family: "Courier Prime",sans-serif;
-  background-color: #4f4f4f;
+  background-color: $gray;
   box-shadow: 0 5px 10px $black;
 
   p {
@@ -283,7 +284,7 @@ main {
 .section__main-skills {
   width: 100%;
   margin: 4.5rem 0 4.5rem 0;
-  background-color: #161616;
+  background-color: $background-black;
   h2 {
     padding: 2rem 0 0 4rem;
     font-size: 2.25rem;
@@ -398,17 +399,10 @@ main {
     }
   }
 }
-.section__main-companies-group-left {
-  border: 1px solid red;
-}
-.section__main-companies-group-right {
-  border: 1px solid red;
-}
 
 .company {
   border: 1px solid red;
   padding: 2rem;
-
   h3 {
     padding: 1rem;
     text-align: center;
@@ -420,13 +414,12 @@ main {
   p {
     text-align: justify;
     font-weight: 300;
-    color: #f3f3f3;
+    color: $paragraph-white;
     font-size: 1rem;
   }
 
   a {
     position: relative;
-    border: 1px solid red;
     display: block;
     padding: 1rem;
     margin: 1rem auto;
@@ -435,12 +428,10 @@ main {
     font-weight: 700;
     color: $white;
     font-size: 1.25rem;
-
     &:hover {
       color: $neon-green;
-      stop {
-        stop-color: $neon-green;
-        stop-opacity: 1;
+        rect {
+        stroke: $neon-green;
       }
     }
   }
@@ -453,7 +444,6 @@ main {
       z-index: 1;
       width: 100%;
       height: 100%;
-      fill: transparent;
     }
 
     span {
@@ -503,7 +493,231 @@ main {
       top:79.5%;
     }
     path {
-      fill: #161616;
+      fill: $background-black;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .section__header {
+    padding: 3rem;
+  }
+  .section__header-h1 {
+    h1 {
+      padding: 0.75rem;
+      letter-spacing: 0.25rem;
+      font-size: 3rem;
+    }
+    h2 {
+      padding: 1.5rem 0;
+      font-size: 2.5rem;
+    }
+    h3 {
+      padding: 0.5rem 0;
+      font-size: 1.5rem;
+    }
+  }
+
+  .section__header-years {
+    p:nth-child(2n+1) {
+      padding: 0 0.75rem 0 0.25rem;
+      font-size: 3rem;
+    }
+    p:nth-child(2) {
+      padding-right: 1rem;
+      font-weight: 400;
+      font-size: 0.75rem;
+    }
+    p:nth-child(4) {
+      font-size: 0.75rem;
+    }
+  }
+}
+.section__main-container {
+  padding: 3rem;
+}
+.section__main-about {
+  width: 40vw;
+  h2 {
+    padding-bottom: 0.75rem;
+  }
+    span {
+      letter-spacing: 0.25rem;
+    }
+
+    p{
+      font-size: 2rem;
+    }
+  }
+
+.section__main-skills {
+  margin: 3rem 0 3rem 0;
+}
+.main__card {
+  padding: 0.75rem 1.75rem 0.75rem 1.75rem;
+  width: 35vw;
+  margin-top: 0.25rem;
+
+  p {
+    padding-bottom: 0.75rem;
+    font-size: 1.25rem;
+  }
+
+  a{
+    font-size: 0.75rem;
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+.projects-container {
+  margin-bottom: 6rem;
+}
+.company {
+  p {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 480px){
+  .section__header {
+    padding: 2rem;
+  }
+  .section__header-h1 {
+    h1 {
+      padding: 0.5rem;
+      letter-spacing: 0;
+      font-size: 2rem;
+    }
+    h2 {
+      padding: 0.75rem 0;
+      font-size: 1rem;
+    }
+    h3 {
+      padding: 0;
+      font-size: 0.5rem;
+    }
+  }
+  .section__header-years {
+    p:nth-child(2n+1) {
+      padding: 0 0.25rem 0 0;
+      font-size: 1.5rem;
+    }
+    p:nth-child(2) {
+      padding-right: 0.5rem;
+      font-size: 0.5rem;
+    }
+    p:nth-child(4) {
+      font-size: 0.5rem;
+    }
+  }
+}
+.section__main-container {
+  padding: 2rem;
+}
+.section__main-about {
+  h2 {
+    font-size: 0.75rem;
+    padding-bottom: 0.25rem;
+  }
+    span {
+      letter-spacing: 0;
+    }
+
+    p{
+      font-size: 0.5rem;
+    }
+  }
+
+.main__card {
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  width: 35vw;
+  margin-top: 0.25rem;
+
+  p {
+    padding-bottom: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  a{
+    font-size: 0.5rem;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+.company {
+  padding: 0.5rem;
+  h3 {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+
+  a {
+    padding: 0.5rem;
+    margin: 0.5rem auto;
+    width: 25vw;
+    font-size: 0.5rem;
+    span {
+      font-size: 0.75rem;
+    }
+  }
+
+  .rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+.section__main-skills {
+  margin: 2rem 0 2rem 0;
+  h2 {
+    padding: 0.5rem 0 0 1rem;
+    font-size: 0.75rem;
+    span {
+      letter-spacing: 0;
+    }
+  }
+}
+
+.section__main-skills-svg-container {
+  padding: 1rem 0.5rem 1rem 0.5rem;
+  svg {
+    margin-left: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+.section__main-projects {
+  h2 {
+    padding: 0.5rem 0 0 1rem;
+    font-size: 0.75rem;
+  }
+  span {
+    letter-spacing: 0;
+  }
+}
+.projects-container {
+  margin-bottom: 4rem;
+}
+.section__main-companies {
+  padding: 1rem;
+  h2 {
+    padding: 0.5rem 0 0 0;
+    font-size: 0.75rem;
+    span {
+      letter-spacing: 0;
     }
   }
 }

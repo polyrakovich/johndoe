@@ -15,7 +15,7 @@ $df-white: #dfdfdf;
 $header-white: #e0e0e0;
 
 @mixin header-text-effects {
-  text-stroke: 1px $black;
+  stroke: 1px $black;
   text-shadow: 0 2px 5px $black;
 }
 @mixin flex-between {
